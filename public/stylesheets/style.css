@@ -2,21 +2,12 @@
   Base Styles
 ==================================== */
 
-/** {
-	box-sizing: border-box;
-}*/
-
 body {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-img {
-/*	width: 100px;
-	hieght: 100px;*/
 }
 
 .container-main {
@@ -30,11 +21,9 @@ img {
 .container-threeDay,
 .container-zipCode {
 	display: flex;
-	color: #fff;
 	padding: 5px;
 	margin: 0px;	
 	border: 1px solid black;
-	background: #3db5da;
 }
 
 .footer {
@@ -82,16 +71,18 @@ img {
 	flex-direction: column;
 	margin: 10px;
 	width: 20%;
+	font-size: 2em;
 }
 
 .leftTodaySpace {
 	visibility: hidden;
 	margin: 10px;
 	width: 20%;
+	font-size: 2em;
 }
 
 .todayDescription {
-
+	font-size: 0.5em;
 }
 
 /* ================================= 
@@ -115,7 +106,6 @@ Three Day Weather Section
 }
 
 .threeDayIcon {
-/*	display: flex;*/
 	padding-right: 10px;
 	padding-left: 10px;
 	text-align: right;
@@ -144,6 +134,7 @@ Zip Code Section
 /*	flex-direction: row;*/
 	justify-content: center;
 	align-items: center;
+	border: none;
 }
 
 .zipCodeTitle {
