@@ -6,37 +6,33 @@ $(document).ready( function () {
 	var location = null;
 
 	//build url
-	var url = null;
+	var url = "http://api.wunderground.com/api/8c1a8ef70cc596b2/forecast/q/autoip.json";
 
 	$.ajax({
-		url : "http://api.wunderground.com/api/8c1a8ef70cc596b2/forecast/q/autoip.json",
+		url : url,
   		dataType : "jsonp",
   		success : function(parsed_json) {
   			console.log("parsed_json");
   			console.log(parsed_json)
 
+  			//array to capture forecast data
   			var data = [];
 
   			for(var i = 0; i < 4; i++) {
 
+  				//create placeholder object for current day's data
   				var dayData = {
   					temp    : null,
   					iconUrl : null,
   					weekday : null,
   				};
 
+  				// populate dayData object with day's data from api call
 	  			dayData.temp = parsed_json.forecast.simpleforecast.forecastday[i].high.fahrenheit;
-	  			// console.log("temp");
-	  			// console.log(temp);
-
 	  			dayData.iconUrl = parsed_json.forecast.simpleforecast.forecastday[i].icon_url;
-	  			// console.log("iconUrl");
-	  			// console.log(iconUrl);
-	  			
 	  			dayData.weekday = parsed_json.forecast.simpleforecast.forecastday[i].date.weekday;
-	  			// console.log("weekday");
-	  			// console.log(weekday);
 
+	  			// add current day's data to data array
 	  			data.push(dayData);
 
 	  		}
@@ -44,9 +40,19 @@ $(document).ready( function () {
 	  		console.log("data");
 	  		console.log(data);
 
-  			//var location = parsed_json['location']['city'];
-  			//var temp_f = parsed_json['current_observation']['temp_f'];
-  			//alert("Current temperature in " + location + " is: " + temp_f);
+	  		//update icons on page
+
+
+	  		//update temps on page
+	  		$("#todayTemp").html(data[0].temp);
+	  		$("#dayOneTemp").html(data[1].temp);
+	  		$("#dayTwoTemp").html(data[2].temp);
+	  		$("#dayThreeTemp").html(data[3].temp);
+
+	  		//update days on page
+	  		$("#dayOneName").html(data[1].weekday);
+	  		$("#dayTwoName").html(data[2].weekday);
+	  		$("#dayThreeName").html(data[3].weekday);
   		}
   	});
 
