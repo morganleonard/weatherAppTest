@@ -8,25 +8,34 @@ html
     //- script(type="text/javascript" src="./public/javascripts/jquery-2.1.4.js")
   body
     div(class="container-main")
+
       div(class="container-today" id= "todayWeather")
         p(class= "location") Portland, Or
         p(class= "todayName") Today
         div(class="container-today-inner")
-          img(class ="todayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif" max-height= "50px" max-width= "50px")
+          div(class="leftTodaySpace") 
+          img(class ="todayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif")
           div(class= "todayTemp") 70
             div(class= "todayDescription") Cloudy
+
       div(class= "container-threeDay" id= "dayOne")
-        img(class= "threeDayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif")
+        div(class= "container-threeDayIcon")
+          img(class= "threeDayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif" max-width= "100px" max-hieght= "100px")
         p(class= "threeDayName") Friday
         p(class= "threeDayTemp") 68
+
       div(class="container-threeDay" id= "dayTwo") 
-        img(class= "threeDayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif")
+        div(class= "container-threeDayIcon")
+          img(class= "threeDayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif")
         p(class= "threeDayName") Saturday
         p(class= "threeDayTemp") 75
+
       div(class= "container-threeDay" id= "dayThree")
-        img(class= "threeDayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif")
+        div(class= "container-threeDayIcon")
+          img(class= "threeDayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif")
         p(class= "threeDayName") Sunday
         p(class= "threeDayTemp") 68
+
       div(class= "container-zipCode") 
         p(class= "zipCodeTitle") Zip Code
         input(type= "number" name= "zip" value= "Enter Zip Code" class= "zipCodeInput")
