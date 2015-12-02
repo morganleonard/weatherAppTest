@@ -17,6 +17,9 @@ $(document).ready( function () {
 
 		// call api with new zip and update page
 		makeApiCall(url);
+
+		// update location on page
+		$("#locationName").html("Zip Code: " + zip);
 	})
 
 	
