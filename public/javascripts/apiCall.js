@@ -41,7 +41,10 @@ $(document).ready( function () {
 	  		console.log(data);
 
 	  		//update icons on page
-
+	  		$("#todayConditionIcon").attr("src", data[0].iconUrl);
+	  		$("#dayOneIcon").attr("src", data[1].iconUrl);
+	  		$("#dayTwoIcon").attr("src", data[2].iconUrl);
+	  		$("#dayThreeIcon").attr("src", data[3].iconUrl);
 
 	  		//update temps on page
 	  		$("#todayTemp").html(data[0].temp);
