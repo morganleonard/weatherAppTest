@@ -95,7 +95,6 @@ Three Day Weather Section
 }
 
 .container-forecastDay {
-	display: flex;
 	flex-direction: row;
 }
 
@@ -130,8 +129,6 @@ Zip Code Section
 
 
 .container-zipCode {
-	display: flex;
-/*	flex-direction: row;*/
 	justify-content: center;
 	align-items: center;
 	border: none;
