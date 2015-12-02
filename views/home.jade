@@ -7,24 +7,28 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     //- script(type="text/javascript" src="./public/javascripts/jquery-2.1.4.js")
   body
-    div(class="container")
-      div(class= "today" id= "todayWeather")
-        p(class= "todayIcon") Today Icon Placeholder
+    div(class="container-main")
+      div(class="container-today" id= "todayWeather")
+        p(class= "location") Portland, Or
         p(class= "todayName") Today
-        p(class= "todayTemp") Temp Today
-      div(class= "threeDay" id= "threeDayWeatherDayOne")
-        p(class= "threeDayIcon") Day Icon Placeholder
+        div(class="container-today-inner")
+          img(src="http://icons.wxug.com/i/c/a/partlycloudy.gif")
+          p(class= "todayTemp") 70
+            p Cloudy
+      div(class= "container-threeDay" id= "dayOne")
+        img(class= "threeDayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif")
         p(class= "threeDayName") Friday
-        p(class= "threeDayTemp") 70
-      div(class="threeDay" id= "threeDayWeatherDayTwo") 
-        p(class= "threeDayIcon") Day Icon Placeholder
+        p(class= "threeDayTemp") 68
+      div(class="container-threeDay" id= "dayTwo") 
+        img(class= "threeDayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif")
         p(class= "threeDayName") Saturday
-        p(class= "threeDayTemp") 70
-      div(class= "threeDay" id= "threeDayWeatherDayThree")
-        p(class= "threeDayIcon") Day Icon Placeholder
+        p(class= "threeDayTemp") 75
+      div(class= "container-threeDay" id= "dayThree")
+        img(class= "threeDayIcon" src="http://icons.wxug.com/i/c/a/partlycloudy.gif")
         p(class= "threeDayName") Sunday
-        p(class= "threeDayTemp") 70
-      div(class= "zipCode") Zip Code
+        p(class= "threeDayTemp") 68
+      div(class= "container-zipCode") 
+        p(class= "zipCodeTitle") Zip Code
         input(type= "number" name= "zip" value= "Enter Zip Code" class= "zipCodeInput")
         button(class= "zipButton") Change
   footer(class="footer") Footer Placeholder

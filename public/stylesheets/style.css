@@ -13,9 +13,10 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.container {
-	display: flex;
-	flex-direction: column;
+
+.container-main {
+/*	display: flex;
+	flex-direction: column;*/
 	width: 100%;
 	margin: 45px auto;
 	padding: 10px;
@@ -24,11 +25,11 @@ body {
   	box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
 }
 
-.today,
-.threeDay,
-.zipCode {
+.container-today,
+.container-threeDay,
+.container-zipCode {
 	display: flex;
-	flex-direction: column;
+/*	flex-direction: column;*/
 	color: #fff;
 	padding: 15px;
 	margin: 0px;	
@@ -37,23 +38,30 @@ body {
 	border-radius: 3px;
 }
 
-.threeDayIcon {
-	padding-right: 10%;
-	text-align: right;
-	width: 40%;
-/*	flex-grow: 1;*/
-/*	align-self: flex-start;*/
+.footer {
+	margin-top: auto;
+	width: 100%;
+	border: 1px solid black;
 }
 
-.threeDayName {
-	width: 20%;
-/*	align-self: center;*/
+/* ================================= 
+ Today's Weather Section
+==================================== */
+
+.container-today {
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: center;
+	height: auto;
 }
 
-.threeDayTemp {
-	width: 40%;
-/*	flex-grow: 1;*/
-	/*align-self: flex-end;*/
+.container-today-inner {
+	display: flex;
+	flex-direction: row;
+}
+
+.location {
+	width: 100%;
 }
 
 .todayIcon {
@@ -61,33 +69,63 @@ body {
 }
 
 .todayName {
-	margin: 10px;
+	margin: 5px 0px 0px 0px;
+	width: 100%;
+	order: 1;
 }
 
 .todayTemp {
 	margin: 10px;
-
 }
 
-.today {
-	height: auto;
-}
+/* ================================= 
+Three Day Weather Section
+==================================== */
 
 .threeDay {
-	flex-direction: row;
+/*	flex-direction: row;*/
 	justify-content: space-around;
 
 }
 
-.zipCode {
-	justify-content: space-between;
+.threeDayIcon {
+	padding-right: 10%;
+	text-align: right;
+	width: 35%;
 }
 
-.footer {
-	margin-top: auto;
-	width: 100%;
-	border: 1px solid black;
+.threeDayName {
+	width: 35%;
 }
+
+.threeDayTemp {
+	width: 30%;
+}
+
+
+/* ================================= 
+Zip Code Section
+==================================== */
+
+
+.zipCode {
+/*	flex-direction: row;*/
+	justify-content: center;
+}
+
+.zipCodeTitle {
+	margin: 0;
+	padding-right: 10px;
+}
+
+.zipCodeInput {
+	width: 100px;
+}
+
+.zipButton {
+	margin: 0 10px;
+}
+
 
 /* ================================= 
   Media Queries
