@@ -8,13 +8,15 @@
 
 body {
 	display: flex;
+	flex-direction: column;
 	min-height: 100vh;
-	padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .container {
-	width: 60%;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 	margin: 45px auto;
 	padding: 10px;
 	background: #fff;
@@ -25,8 +27,8 @@ body {
 .today,
 .threeDay,
 .zipCode {
-	flex-direction: row;
-	flex: 1;
+	display: flex;
+	flex-direction: column;
 	color: #fff;
 	padding: 15px;
 	margin: 0px;	
@@ -35,16 +37,50 @@ body {
 	border-radius: 3px;
 }
 
+.threeDayIcon {
+	padding-right: 10%;
+	text-align: right;
+	width: 40%;
+/*	flex-grow: 1;*/
+/*	align-self: flex-start;*/
+}
+
+.threeDayName {
+	width: 20%;
+/*	align-self: center;*/
+}
+
+.threeDayTemp {
+	width: 40%;
+/*	flex-grow: 1;*/
+	/*align-self: flex-end;*/
+}
+
+.todayIcon {
+	marign: 10px;
+}
+
+.todayName {
+	margin: 10px;
+}
+
+.todayTemp {
+	margin: 10px;
+
+}
+
 .today {
 	height: auto;
 }
 
 .threeDay {
-	flex-direction
+	flex-direction: row;
+	justify-content: space-around;
+
 }
 
 .zipCode {
-
+	justify-content: space-between;
 }
 
 .footer {
@@ -58,6 +94,10 @@ body {
 ==================================== */
 /*
 @media (min-width: 320px) {
+
+	.container {
+		width: 60%;
+	}
 
 	.today,
 	.threeDay {
