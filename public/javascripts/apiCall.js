@@ -28,7 +28,7 @@ $(document).ready( function () {
   				};
 
   				// populate dayData object with day's data from api call
-	  			dayData.temp = parsed_json.forecast.simpleforecast.forecastday[i].high.fahrenheit;
+	  			dayData.temp = parsed_json.forecast.simpleforecast.forecastday[i].high.fahrenheit + "&#176";
 	  			dayData.iconUrl = parsed_json.forecast.simpleforecast.forecastday[i].icon_url;
 	  			dayData.weekday = parsed_json.forecast.simpleforecast.forecastday[i].date.weekday;
 
