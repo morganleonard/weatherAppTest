@@ -27,9 +27,15 @@ body {
 }
 
 .footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin-top: auto;
 	width: 100%;
-	background: #3db5da;
+}
+
+.footerText {
+	padding-left: 10px;
 }
 
 /* ================================= 
