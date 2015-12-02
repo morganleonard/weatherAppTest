@@ -2,11 +2,12 @@
   Base Styles
 ==================================== */
 
-* {
+/** {
 	box-sizing: border-box;
-}
+}*/
 
 body {
+	margin: 0;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -20,11 +21,9 @@ img {
 
 .container-main {
 	width: 100%;
-	margin: auto;
-	padding: 10px;
+	margin: 0 auto auto auto;
+	padding: 0px;
 	background: #fff;
- 	border-radius: 5px;
-  	box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
 }
 
 .container-today,
@@ -36,13 +35,12 @@ img {
 	margin: 0px;	
 	border: 1px solid black;
 	background: #3db5da;
-	border-radius: 3px;
 }
 
 .footer {
 	margin-top: auto;
 	width: 100%;
-	border: 1px solid black;
+	background: #3db5da;
 }
 
 /* ================================= 
@@ -145,9 +143,11 @@ Zip Code Section
 	display: flex;
 /*	flex-direction: row;*/
 	justify-content: center;
+	align-items: center;
 }
 
 .zipCodeTitle {
+	font-size: 0.8em;
 	margin: 0;
 	padding-right: 10px;
 }
@@ -165,7 +165,7 @@ Zip Code Section
   Media Queries
 ==================================== */
 
-@media (min-width: 320px) {
+@media (min-width: 321px) {
 
 	.container-main {
 		width: 80%;
@@ -192,7 +192,8 @@ Zip Code Section
 	.container-threeDayIcon {
 		display: inline;
 		flex-direction: column;
-		/*width: 50%;*/
+		width: auto;
+		height: auto;
 	}	
 
 	.threeDayIcon {
