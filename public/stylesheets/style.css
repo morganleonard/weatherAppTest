@@ -196,6 +196,7 @@ Zip Code Section
 
 	.forecastName {
 		padding-left: 0px;
+		margin-bottom: 5px;
 		text-align: center;
 		width: 100%;
 		order: 1;
