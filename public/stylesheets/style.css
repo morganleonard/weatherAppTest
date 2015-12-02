@@ -19,10 +19,8 @@ img {
 }
 
 .container-main {
-/*	display: flex;
-	flex-direction: column;*/
 	width: 100%;
-	margin: 45px auto;
+	margin: auto;
 	padding: 10px;
 	background: #fff;
  	border-radius: 5px;
@@ -33,9 +31,8 @@ img {
 .container-threeDay,
 .container-zipCode {
 	display: flex;
-/*	flex-direction: column;*/
 	color: #fff;
-	padding: 15px;
+	padding: 5px;
 	margin: 0px;	
 	border: 1px solid black;
 	background: #3db5da;
@@ -63,7 +60,6 @@ img {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-/*	justify-content: space-between;*/
 	align-items: center;
 }
 
@@ -91,6 +87,7 @@ img {
 }
 
 .leftTodaySpace {
+	visibility: hidden;
 	margin: 10px;
 	width: 20%;
 }
@@ -103,10 +100,9 @@ img {
 Three Day Weather Section
 ==================================== */
 
-.threeDay {
-/*	flex-direction: row;*/
-	justify-content: space-around;
-
+.container-threeDayGroup {
+	display: flex;
+	flex-direction: column;
 }
 
 .container-threeDayIcon {
@@ -116,14 +112,10 @@ Three Day Weather Section
 }
 
 .threeDayIcon {
-/*	width: 100px;*/
-	max-width: 150px;
-	max-height: 150px;
 	padding-right: 10px;
 	padding-left: 10px;
 	text-align: right;
 	align-self: center;
-/*	width: 35%;*/
 }
 
 .threeDayName {
@@ -164,14 +156,25 @@ Zip Code Section
 /* ================================= 
   Media Queries
 ==================================== */
-/*
+
 @media (min-width: 320px) {
 
-	.container {
-		width: 60%;
+	.container-main {
+		width: 80%;
 	}
 
-	.today,
+	.container-threeDayGroup {
+		flex-direction: row;
+	}
+
+	.todayName {
+		visibility: hidden;
+	}
+
+	.leftTodaySpace {
+		visibility: visible;
+	}
+/*	.today,
 	.threeDay {
 		border: 5px;
 		display: flex;
@@ -185,6 +188,6 @@ Zip Code Section
 		flex-direction: row;
 		flex
 		align-items: center;
-	}
-}*/
+	}*/
+}
 
