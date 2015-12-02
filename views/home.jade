@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name= "viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    //- script(type="text/javascript" src="./public/javascripts/jquery-2.1.4.js")
+  body
+    div(class="container")
+      div(class= "today" id= "todayWeather")
+        p(class= "todayIcon") Today Icon Placeholder
+        p(class= "todayName") Today
+        p(class= "todayTemp") Temp Today
+      div(class= "threeDay" id= "threeDayWeatherDayOne")
+        p(class= "threeDayIcon") Day Icon Placeholder
+        p(class= "threeDayName") Day Name
+        p(class= "threeDayTemp") Day Temp
+      div(class="threeDay" id= "threeDayWeatherDayTwo") 
+        p(class= "threeDayIcon") Day Icon Placeholder
+        p(class= "threeDayName") Day Name
+        p(class= "threeDayTemp") Day Temp
+      div(class= "threeDay" id= "threeDayWeatherDayThree")
+        p(class= "threeDayIcon") Day Icon Placeholder
+        p(class= "threeDayName") Day Name
+        p(class= "threeDayTemp") Day Temp
+      div(class= "zipCode") Zip Code
+        input(type= "number" name= "zip" value= "Enter Zip Code" class= "zipCodeInput")
+        button(class= "zipButton") change
+
+  footer(class="footer") Footer Placeholder
+    div() Powered by Weather Underground
