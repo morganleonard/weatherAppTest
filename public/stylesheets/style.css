@@ -105,6 +105,11 @@ Three Day Weather Section
 	flex-direction: column;
 }
 
+.container-threeDay {
+	display: flex;
+	flex-direction: row;
+}
+
 .container-threeDayIcon {
 	display: flex;
 	flex-direction: column;
@@ -112,6 +117,7 @@ Three Day Weather Section
 }
 
 .threeDayIcon {
+/*	display: flex;*/
 	padding-right: 10px;
 	padding-left: 10px;
 	text-align: right;
@@ -126,6 +132,7 @@ Three Day Weather Section
 
 .threeDayTemp {
 	width: 30%;
+	order: 1;
 }
 
 
@@ -134,7 +141,8 @@ Zip Code Section
 ==================================== */
 
 
-.zipCode {
+.container-zipCode {
+	display: flex;
 /*	flex-direction: row;*/
 	justify-content: center;
 }
@@ -163,10 +171,6 @@ Zip Code Section
 		width: 80%;
 	}
 
-	.container-threeDayGroup {
-		flex-direction: row;
-	}
-
 	.todayName {
 		visibility: hidden;
 	}
@@ -174,20 +178,37 @@ Zip Code Section
 	.leftTodaySpace {
 		visibility: visible;
 	}
-/*	.today,
-	.threeDay {
-		border: 5px;
-		display: flex;
-	}
-	.today {
-		border: 5px;
-		flex-direction: column;
-		align-items: center;
-	}
-	.threeDay {
+
+	.container-threeDayGroup {
 		flex-direction: row;
-		flex
-		align-items: center;
-	}*/
+	}
+
+	.container-threeDay {
+		display: inline;
+		/*flex-direction: column;*/
+		width: 33.333%;
+	}
+
+	.container-threeDayIcon {
+		display: inline;
+		flex-direction: column;
+		/*width: 50%;*/
+	}	
+
+	.threeDayIcon {
+		padding-left: 5%;
+	}
+
+	.threeDayName {
+		padding-left: 0px;
+		text-align: center;
+		width: 100%;
+		order: 1;
+	}
+
+	.threeDayTemp {
+		width: auto;
+		display: inline;
+	}
 }
 
